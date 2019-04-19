@@ -1,0 +1,115 @@
+$background-main: #edf4f7;
+$background-side: #f4f8fa;
+$Primary-blue: #32444d;
+$Secondary-blue: #b3c3cc;
+$Primary-orange: #ff6719;
+$Secondary-orange: #ffaa80;
+
+// -- MAIN CSS --
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+
+    background-color: $background-main;
+    color: $Primary-blue;
+
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    min-height: 100vh;
+}
+
+nav {
+    background-color: $background-side;
+    padding: 48px;
+}
+
+main {
+    padding: 48px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+} 
+
+h2 {
+    color: $Secondary-blue;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 24px 0 0 0;
+}
+
+p {
+    font-size: 24px;
+    margin: 0;
+}
+
+// -- SVG CSS --
+
+// -- rect --
+
+rect {
+    fill: $Primary-orange;
+    transition: .3s fill;
+}
+
+rect:hover {
+    fill: $Primary-blue;
+}
+
+rect.transparent {
+    opacity: 0;
+}
+
+// -- circle --
+
+circle.actual {
+    fill: $Primary-blue;
+}
+
+circle.ring {
+    fill: none;
+    stroke: $Secondary-blue;
+    stroke-width: 2px; 
+    opacity: .25;
+}
+
+// -- text --
+
+text {
+    fill: $Secondary-orange;
+    text-anchor: middle;
+    font-size: 14px;
+}
+
+text.steps {
+    opacity: 0;
+    transition: .3s opacity;
+}
+
+text.day {
+    opacity: 1;
+    transition: .3s opacity;
+}
+
+svg.month text {
+    fill: $Primary-blue;
+}
+
+// -- group hover --
+
+g:hover text.day {
+    opacity: 0;
+}
+
+g:hover text.steps {
+    opacity: 1;
+}
+
+
+
